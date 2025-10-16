@@ -34,7 +34,7 @@ jobs:
         name: Build
         run: |
           chmod +x compile_macosx.sh
-          ./compile_macosx.sh arm64 Release
+          ./compile_macosx.sh arm64 Release ${{ github.event.inputs.repo }} ${{ github.event.inputs.ref }}
       -
         name: Export artifacts
         uses: actions/upload-artifact@v4
